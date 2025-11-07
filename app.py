@@ -11,8 +11,11 @@ st.set_page_config(page_title="Mortgage Assistant", page_icon="🏠")
 st.title("🏠 Mortgage Underwriting Assistant")
 
 # Configuration
-LANGFLOW_URL = os.getenv("LANGFLOW_URL")
-API_KEY = os.getenv("LANGFLOW_API_KEY")
+# LANGFLOW_URL = os.getenv("LANGFLOW_URL")
+# API_KEY = os.getenv("LANGFLOW_API_KEY")
+
+LANGFLOW_URL = st.secrets["LANGFLOW_URL"]
+API_KEY = st.secrets["LANGFLOW_API_KEY"]
 
 # Initialize session state
 if 'session_id' not in st.session_state:
